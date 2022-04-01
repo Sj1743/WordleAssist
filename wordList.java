@@ -1,8 +1,6 @@
-public class wordList{
-    public static void main(String args[]){
-        String[] wordList;     
-        
-        wordList = new String[]
+package wordleassist;
+public class wordList{      
+        static String[] words =
         {
             "aback",
             "abase",
@@ -2314,5 +2312,4 @@ public class wordList{
             "zesty",
             "zonal"
         };
-    }
 }
