@@ -33,12 +33,12 @@ public class wordleFilter{
             }
         }else if(pos == 0){
             for(int i = 0; i < list.length; i++){
-                if(!(list[i].equals("")) && list[i].indexOf(ch) == -1)
+                if(!(list[i].equals("")) && list[i].indexOf(ch) != -1)
                     list[i] = "";
             }
-        }else if(pos == -1){
+        }else if(pos < 0 && pos > -6){
             for(int i = 0; i < list.length; i++){
-                if(!(list[i].equals("")) && list[i].indexOf(ch) != -1)
+                if(!(list[i].equals("")) && list[i].charAt((pos*(-1))-1) == ch)
                     list[i] = "";
             }
         }
@@ -47,8 +47,8 @@ public class wordleFilter{
     public static void instructions(){
         System.out.println("Type in the alphabet that is included or not included in the word when prompted for letter."); 
         System.out.println("If the letter is in the word, enter the position of said letter in the word if known (1, 2, 3, 4, or 5), when prompted for position."); 
-        System.out.println("If the letter is in the word but position remains unknown, return 0 when prompted for position."); 
-        System.out.println("If the letter is NOT in the word, input -1 when prompted for position."); 
+        System.out.println("If the letter is in the word but not at a certain position, enter the negative value of that position(-1, -2, -3, -4, or -5), when prompted for position.");
+        System.out.println("If the letter is NOT in the word, input 0 when prompted for position."); 
         System.out.println("To exit, enter any number when prompted for letter."); 
     }
 

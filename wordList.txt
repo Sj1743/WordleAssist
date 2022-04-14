@@ -1,3 +1,4 @@
+# Wordle Solution List
 aback
 abase
 abate
